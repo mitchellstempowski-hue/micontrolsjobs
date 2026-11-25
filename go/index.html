@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MI Controls Jobs — Michigan's Controls-Only Job Board</title>
+<meta name="description" content="Saw our billboard? MI Controls Jobs is Michigan's controls-only job board. Employers: $50 off your first post with code BOARD. Engineers: every PLC & controls opening in Michigan, one board.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../styles.css?v=20261119a">
+<style>
+  .go-hero { padding: 2.2rem 0 0.6rem; }
+  .go-hero h1 { margin-bottom: 0.4rem; }
+  .go-hero p { max-width: 44rem; }
+  .go-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin: 1.4rem 0 2.2rem; }
+  @media (max-width: 720px) { .go-grid { grid-template-columns: 1fr; } }
+  .go-card { border: 1px solid var(--line, #d8d2c4); border-radius: 10px; padding: 1.4rem 1.3rem 1.5rem; background: #fffdf8; }
+  .go-card h2 { margin-top: 0; }
+  .go-card .kicker { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #8a6d1f; font-weight: 700; margin: 0 0 0.5rem; }
+  .go-code { display: inline-block; font-weight: 800; letter-spacing: 0.06em; border: 2px dashed #b98a1c; border-radius: 8px; padding: 0.3rem 0.7rem; margin: 0.4rem 0 0.8rem; background: #fdf6e0; }
+  .go-cta { display: inline-block; margin-top: 0.7rem; font-weight: 700; }
+  .go-fine { font-size: 0.85rem; color: #5c574c; max-width: 46rem; }
+</style>
+</head>
+<body data-page="go">
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">MI Controls <span>Jobs</span></a>
+    <nav class="site-nav">
+      <a href="../index.html">Jobs</a>
+      <a href="../salary.html">Pay</a>
+      <a class="nav-cta" href="../post-a-job.html">Post a Job</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="go-hero">
+    <h1>Saw our billboard? You're in the right place.</h1>
+    <p>MI Controls Jobs is the Michigan-only board for PLC, controls, and automation work — one trade, one state, no noise. Pick your side:</p>
+  </section>
+
+  <div class="go-grid">
+    <section class="go-card">
+      <p class="kicker">For employers</p>
+      <h2>Hiring controls engineers?</h2>
+      <p>Post your opening where Michigan controls techs actually look. Every post runs 30 days, and if it draws fewer than 3 qualified applicants, your repost is free — upgraded to Featured.</p>
+      <p>Billboard offer — $50 off your first post:</p>
+      <p><span class="go-code">CODE: BOARD</span></p>
+      <p>Standard from $99 with the code. Enter <strong>BOARD</strong> in the referral-code field when you post and the $50 comes off your first post.</p>
+      <a class="go-cta" data-go="employer" href="../post-a-job.html?promo=BOARD">Post a job →</a>
+    </section>
+
+    <section class="go-card">
+      <p class="kicker">For engineers &amp; techs</p>
+      <h2>Controls jobs. Michigan only.</h2>
+      <p>Every PLC, controls, and automation opening we can verify from Michigan employers — direct employer postings, no warehouse filler, no out-of-state bait. Free for job seekers, always.</p>
+      <a class="go-cta" data-go="engineer" href="../index.html">Browse Michigan controls jobs →</a>
+      <p><a data-go="engineer" href="../index.html#alerts">Or get free job alerts by email →</a></p>
+    </section>
+  </div>
+
+  <p class="go-fine">Code BOARD terms: $50 off one first paid post (Standard, Featured, or Premium) per employer; enter it in the referral-code field on the post-a-job form and the discount is applied to that first post before it goes live. MI Controls Jobs is run by MS ECOM LLC, Troy, Michigan. Questions: <a href="mailto:mitchell@msecomllc.com">mitchell@msecomllc.com</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>MI Controls Jobs</strong> — every PLC &amp; controls job in Michigan. Free for job seekers, always.</p>
+    <p>Questions? <a href="mailto:mitchell@msecomllc.com">mitchell@msecomllc.com</a></p>
+    <p><a href="../index.html">Browse jobs</a> · <a href="../post-a-job.html">Post a job ($149 / 30 days)</a> · <a href="../snapshot.html">Michigan Controls Hiring Snapshot</a> · <a href="../referral-terms.html">Referral terms</a> · <a href="../privacy.html">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  function hit(e) { try { navigator.sendBeacon('/go.php?e=' + e); } catch (_) {} }
+  hit('landing');
+  document.querySelectorAll('[data-go]').forEach(function (a) {
+    a.addEventListener('click', function () { hit(a.getAttribute('data-go')); });
+  });
+})();
+</script>
+</body>
+</html>

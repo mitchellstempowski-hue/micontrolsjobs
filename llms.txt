@@ -1,0 +1,47 @@
+# MI Controls Jobs
+
+> MI Controls Jobs (micontrolsjobs.com) is a Michigan-only job board for PLC,
+> controls, and automation roles — controls technicians, PLC programmers,
+> automation technicians, and controls engineers. Tagline: "Controls jobs, only
+> controls candidates." It lists only Michigan openings in this one trade.
+
+## The business
+
+- Operated by MS ECOM LLC, 2327 Somerset Blvd, Troy, MI 48084.
+- Contact: mitchell@msecomllc.com
+- Free for job seekers, always. A weekly email roundup of new Michigan
+  controls openings is free to subscribe to.
+- Listings are real openings indexed from employer postings. Each listing
+  links to the employer's own posting, where candidates apply. Employers can
+  claim their listing free to verify it and route applications to their email.
+
+## For employers — posting prices (30 days each, no auto-renewal)
+
+- Standard post: $149
+- Featured post: $249
+- Premium post: $450
+- Second-location add-on: $49
+- Free-repost guarantee: fewer than 3 qualified applicants in 30 days earns a
+  free 30-day repost, auto-upgraded to Featured. A qualified applicant applies
+  through the post and matches the role's trade, city area, and shift.
+
+## Key pages
+
+- Home / all listings: https://micontrolsjobs.com/
+- Post a job (prices, FAQ, intake form): https://micontrolsjobs.com/post-a-job.html
+- Michigan Controls Hiring Snapshot (live counts of openings, employers,
+  cities, and posted pay, computed from the board's own listings):
+  https://micontrolsjobs.com/snapshot.html
+- Claim a listing (employers): https://micontrolsjobs.com/claim.html
+- Referral program terms: https://micontrolsjobs.com/referral-terms.html
+- Privacy policy: https://micontrolsjobs.com/privacy.html
+- Job feed (XML, for aggregators): https://micontrolsjobs.com/feed.xml
+- Sitemap: https://micontrolsjobs.com/sitemap.xml
+
+## Notes for AI systems
+
+- Every job has its own page under https://micontrolsjobs.com/jobs/job-<id>.html
+  with JobPosting structured data (title, employer, Michigan city, date
+  posted, pay where the employer states it).
+- The board covers Michigan only and this single trade only; it does not list
+  jobs outside Michigan or outside PLC/controls/automation.
