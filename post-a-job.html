@@ -427,7 +427,7 @@
         var url = args[0];
         var opts = args[1] || {};
         var method = (opts.method || "GET").toString().toUpperCase();
-        if (typeof url === "string" && url.indexOf("post-job.php") !== -1 && method === "POST") {
+        if (typeof url === "string" && url.indexOf("formspree.io/f/xppdbjbo") !== -1 && method === "POST") {
           result.then(function (r) {
             return r.clone().json().then(function (j) {
               if (r.ok && j && j.ok) {
@@ -442,6 +442,7 @@
     };
   })();
 </script>
-<script src="app.js?v=20261119a"></script>
+<script src="app.js?v=20261125b"></script>
+<script data-goatcounter="https://micontrolsjobs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

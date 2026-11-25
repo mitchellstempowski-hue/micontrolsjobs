@@ -1,0 +1,8 @@
+# MI Controls Jobs — legacy URL consolidation (2026-11-07).
+# The dynamic job.html?id=N renderer was the pre-static URL format (and the
+# format sent in early outreach). The canonical layer is /jobs/job-N.html;
+# these 301s consolidate all legacy links onto it.
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+RewriteRule ^job\.html$ /jobs/job-%1.html? [R=301,L]
+RewriteRule ^job\.html$ / [R=301,L]

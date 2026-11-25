@@ -73,12 +73,13 @@
 
 <script>
 (function () {
-  function hit(e) { try { navigator.sendBeacon('/go.php?e=' + e); } catch (_) {} }
+  function hit(e) { try { if (window.goatcounter) window.goatcounter.count({ path: 'go/' + e, event: true }); } catch (_) {} }
   hit('landing');
   document.querySelectorAll('[data-go]').forEach(function (a) {
     a.addEventListener('click', function () { hit(a.getAttribute('data-go')); });
   });
 })();
 </script>
+<script data-goatcounter="https://micontrolsjobs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* MI Controls Jobs — job-alerts form handler.
    Shared by every page that carries the alerts form (home, job pages,
    role/city/employer pages, salary). Mirrors the claim-form pattern:
-   POST the FormData to alerts.php and confirm in place. */
+   POST the FormData to the Formspree Job Alerts endpoint and confirm in place. */
 (function () {
   var forms = document.querySelectorAll("[data-alerts-form]");
   forms.forEach(function (form) {
@@ -10,7 +10,7 @@
       var note = form.querySelector("[data-alerts-note]");
       var btn = form.querySelector("button[type=submit]");
       if (btn) btn.disabled = true;
-      fetch(form.action, { method: "POST", body: new FormData(form) })
+      fetch(form.action, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
         .then(function (r) {
           return r.json().then(function (j) { return { ok: r.ok && j.ok }; });
         })

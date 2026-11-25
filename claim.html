@@ -235,7 +235,7 @@
       "&body=" + encodeURIComponent(JSON.stringify(data, null, 2));
     var done = document.getElementById("claim-success");
     done.querySelector("a").setAttribute("href", mailto);
-    fetch("claim.php", { method: "POST", body: new FormData(form) })
+    fetch("https://formspree.io/f/xyewodow", { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.ok }; }); })
       .catch(function () { return { ok: false }; })
       .then(function (res) {
@@ -249,5 +249,6 @@
       });
   });
 </script>
+<script data-goatcounter="https://micontrolsjobs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

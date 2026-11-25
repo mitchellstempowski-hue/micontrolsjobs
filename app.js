@@ -228,7 +228,7 @@
         "&body=" + encodeURIComponent(JSON.stringify(data, null, 2));
       var done = document.getElementById("post-success");
       done.querySelector("a").setAttribute("href", mailto);
-      fetch("post-job.php", { method: "POST", body: fd })
+      fetch("https://formspree.io/f/xppdbjbo", { method: "POST", headers: { "Accept": "application/json" }, body: fd })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.ok }; }); })
         .catch(function () { return { ok: false }; })
         .then(function (res) {
@@ -251,7 +251,7 @@
       /* Live intake: POSTs to subscribe.php, which stores the signup.
          The weekly roundup is sent from those stored signups. */
       var wrap = document.getElementById("newsletter-wrap");
-      fetch("subscribe.php", { method: "POST", body: new FormData(form) })
+      fetch("https://formspree.io/f/xvkalbll", { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.ok }; }); })
         .catch(function () { return { ok: false }; })
         .then(function (res) {
