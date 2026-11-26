@@ -223,7 +223,7 @@
   });
 
   /* Submit — mirrors the post-a-job form pattern in app.js: POST the
-     FormData to claim.php, swap to the success block either way, and offer
+     FormData to the Formspree claims endpoint, swap to the success block either way, and offer
      a mailto fallback carrying the same details if the save failed. */
   document.getElementById("claim-form").addEventListener("submit", function (e) {
     e.preventDefault();

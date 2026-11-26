@@ -300,7 +300,7 @@
         <!-- Stripe wiring: PRICING in the script below is the single config
              point — plan prices AND Payment Links live there together. The
              checkout button routes to Stripe for the selected plan; the form
-             submit below remains the intake path (post-job.php). Full spec:
+             submit below remains the intake path (Formspree). Full spec:
              hidden_files/stripe-checkout-spec.md.
              Terms quoted before Oct 27, 2026 ($199 Featured) are honoured as sold. -->
         <a class="btn btn-amber btn-block" id="checkout-btn" href="https://buy.stripe.com/fZueVf2WG11O0ph3PDbjW0q">Continue to checkout — $149 Standard · free-repost guaranteed</a>
@@ -413,7 +413,7 @@
 </script>
 <script>
   /* Microsoft UET: employer-inquiry conversion. The post form's submit
-     handler lives in app.js and POSTs to post-job.php; this wrapper only
+     handler lives in app.js and POSTs to the Formspree Post-a-Job endpoint; this wrapper only
      observes that request's outcome (on a cloned response, so the page's
      own flow is untouched) and fires the event solely when the save
      actually succeeds — never on the submit click, never on failure. */
@@ -442,7 +442,7 @@
     };
   })();
 </script>
-<script src="app.js?v=20261125b"></script>
+<script src="app.js?v=20261125c"></script>
 <script data-goatcounter="https://micontrolsjobs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -218,7 +218,7 @@
     });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      /* Live intake: POSTs to post-job.php, which stores the submission for
+      /* Live intake: POSTs to the Formspree Post-a-Job endpoint, which emails the submission for
          manual review. The employer gets a Stripe checkout link by email
          after review. */
       var data = {};
@@ -248,7 +248,7 @@
     if (!form) return;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      /* Live intake: POSTs to subscribe.php, which stores the signup.
+      /* Live intake: POSTs to the Formspree Subscribe endpoint, which emails the signup.
          The weekly roundup is sent from those stored signups. */
       var wrap = document.getElementById("newsletter-wrap");
       fetch("https://formspree.io/f/xvkalbll", { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
